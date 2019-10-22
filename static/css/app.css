@@ -1,0 +1,105 @@
+/*CSS font size calc*/
+/*https://www.madebymike.com.au/writing/fluid-type-calc-examples/*/
+
+html, body{
+    width: 100%;
+}
+
+h1, h2, main, section{
+    width: 80%;
+    margin: 0 auto;
+}
+
+body{
+    margin-top: 30px;   
+}
+
+h1, h3{
+    text-align: center;
+}
+
+.explanation-container{
+    margin: 30px auto;
+}
+
+#format-container{
+    width:70%;
+    padding: 20px 0;
+}
+#format{
+    width: 100%;
+    font-size: calc(8px + 6 * ((100vw - 320px) / (1200 - 320)));
+    text-align: center;
+}
+
+#moment-cultures-container{   
+    width: 80%; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin: 0 auto;
+}
+
+.moment-culture-container{
+    padding: 20px 0 20px !important;
+    margin: 0 auto !important;
+    margin-bottom: 20px !important;    
+    width: 100%;
+}
+
+.moment-culture-container h3{
+    word-break: break-all;
+    font-size: calc(15px + 15 * ((100vw - 320px) / (1800 - 320)));
+}
+
+.date-time-container{
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(12px + 6 * ((100vw - 320px) / (1800 - 320)));
+}
+
+.date-formated{
+    width: 100%;
+    text-align: center;
+    color:gray;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+    .moment-culture-container, .hidden-hack{
+        width: 95%;
+    }
+ }
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+    .moment-culture-container, .hidden-hack{
+        width: 45%;        
+    } 
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+    .moment-culture-container, .hidden-hack{
+        width: 32%;        
+    } 
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    
+    .moment-culture-container, .hidden-hack{
+        width: 23%;        
+    }     
+    .moment-culture-container h3{
+       /* font-size: 25px; */
+    }
+    .date-time-container{
+        font-size: 18px;
+    }
+    #format{
+        font-size: 14px;
+    }
+}

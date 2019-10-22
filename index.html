@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+        
+        <link rel="stylesheet" href="/static/css/ness.css" />
+        <link rel="stylesheet" href="/static/css/app.css" />
+
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Date Time formatter</h1>
+        <main>
+            <div class="explanation-container">
+                <p>
+                    Type a MomentJS date time format an see the result in multiple languages.
+                </p>
+                <p>
+                    There is plenty of options to format the date and time. 
+                </p>
+            </div>                     
+        </main>     
+        <section id="format-container">          
+            <input id="format" class="nes-input" tabindex="1" autofocus placeholder=" MMMM Do YYYY, h:mm:ss"></input>            
+        </section>
+        
+        <section id="moment-cultures-container">
+        </section>
+
+        <script type="text/javascript" src="/static/js/noModule/moment.js"></script>
+        <script type="module" src="/static/js/app.js"></script>
+        
+    </body>
+</html>
