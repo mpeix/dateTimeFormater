@@ -48,8 +48,9 @@ h1, h3{
 }
 
 .moment-culture-container h3{
-    word-break: break-all;
-    font-size: calc(15px + 15 * ((100vw - 320px) / (1800 - 320)));
+    font-weight: lighter;
+   /* word-break: break-all;
+    font-size: calc(15px + 15 * ((100vw - 320px) / (1800 - 320)));*/
 }
 
 .date-time-container{
@@ -64,6 +65,49 @@ h1, h3{
     width: 100%;
     text-align: center;
     color:gray;
+}
+
+.dialog-component{
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    margin: auto;
+    position: fixed;
+    display: none;
+}
+
+.dialog-menu{
+    text-align: center;
+    padding: 0;
+}
+
+#date-formats-dialog{
+    z-index: 999;
+    background-color: white;
+    max-width: 80vw;
+    max-height: 80vh;
+    width: fit-content;
+    height: fit-content;
+    overflow: scroll;
+}
+
+#dialog-backgorund{
+    z-index: 998;
+    background-color: gray;
+    opacity: 0.75;
+    width:100vw;
+    height: 100vh;
+}
+
+#close-date-formats-dialog{
+    text-align: center;
+    padding: 0;
+}
+
+.usefull-format{
+    color: darkgray;
+    font-weight: bold;
 }
 
 /*Small devices (landscape phones, 576px and up)*/

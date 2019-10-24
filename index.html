@@ -14,10 +14,14 @@
         <main>
             <div class="explanation-container">
                 <p>
-                    Type a MomentJS date time format an see the result in multiple languages.
+                    Type a date time format an see how to write it in multiple languages.
                 </p>
                 <p>
                     There is plenty of options to format the date and time. 
+                    View some of them <span id="show-date-formats" class="nes-text is-primary">here</span>.
+                </p>
+                <p>
+                    This page uses Momment Js to provide the date time format in multiple culture formats.
                 </p>
             </div>                     
         </main>     
@@ -28,8 +32,81 @@
         <section id="moment-cultures-container">
         </section>
 
+        <div class='dialog-component' id='dialog-backgorund'></div>
+        <dialog class="nes-dialog is-rounded dialog-component" id="date-formats-dialog">
+            <form method="dialog">
+              <p class="title">Usefull date time formats</p>
+              <div>
+                    <p>Year</p>
+                    <ul class="nes-list is-circle">
+                        <li>
+                            <span class="usefull-format">YYYY</span> four digit year
+                        </li>
+                        <li>
+                            <span class="usefull-format">YY</span> two digit year
+                        </li>
+                        <li>
+                            <span class="usefull-format">Y</span> year
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Month</p>
+                    <ul>
+                        <li>
+                            <span class="usefull-format">M</span>,&nbsp;<span class="usefull-format">MM</span> month number
+                        </li>
+                        <li>
+                            <span class="usefull-format">MMM</span> month shortened form
+                        </li>
+                        <li>
+                            <span class="usefull-format">MMMM</span> month name
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Day</p>
+                    <ul>
+                        <li>
+                            <span class="usefull-format">D</span>,&nbsp;<span class="usefull-format">DD</span> day of month
+                        </li>
+                        <li>
+                            <span class="usefull-format">Do</span> day with ordinal
+                        </li>
+                        <li>
+                            <span class="usefull-format">ddd</span>,&nbsp;<span class="usefull-format">dddd</span> day name (Mon ... Monday)
+                        </li>   
+                        <li>
+                            <span class="usefull-format">e</span> day of week
+                        </li>
+                        <li>
+                            <span class="usefull-format">DDD</span>,&nbsp;<span class="usefull-format">DDDD</span> day of year
+                        </li>                        
+                    </ul>
+                </div>
+                <div>
+                    <p>Oters</p>
+                    <ul>
+                        <li>
+                            <span class="usefull-format">w</span>,&nbsp;<span class="usefull-format">ww</span> week of year
+                        </li>
+                        <li>
+                            <span class="usefull-format">X</span> Unix timestamp
+                        </li>
+                        <li>
+                            <span class="usefull-format">DDD</span>,&nbsp;<span class="usefull-format">DDDD</span> day of year
+                        </li>
+                    </ul>
+                </div>
+              <menu class="dialog-menu">
+                <button id="close-date-formats-dialog" class="nes-btn">OK</button>              
+              </menu>
+            </form>
+        </dialog>
+
         <script type="text/javascript" src="./static/js/noModule/moment.js"></script>
         <script type="module" src="./static/js/app.js"></script>
-        
+        <script type="text/javascript" src="./static/js/noModule/texblock.min.js"></script>
+      
     </body>
 </html>

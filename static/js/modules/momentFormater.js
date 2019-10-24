@@ -63,8 +63,8 @@ class MomentFormater{
     }
 
 
-    buildCultureContainers(cultureContainerId){       
-        momentCultures.forEach(mc => {
+    buildCultureContainers(cultureContainerId){   
+        momentCultures.sort(mc=>mc.tl===true ? -1 : 1).forEach(mc => {
             
             let dateTimeParagraf = document.createElement('p');
             dateTimeParagraf.classList.add('date-formated');
