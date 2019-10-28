@@ -25,17 +25,19 @@
                 </p>
             </div>                     
         </main>     
-        <section id="format-container">          
-            <input id="format" class="nes-input" tabindex="1" autofocus placeholder=" MMMM Do YYYY, h:mm:ss"></input>            
+        <section id="format-container">  
+            <div id="format-wrapper">                    
+                <input id="format" class="nes-input" tabindex="1" autofocus placeholder=" MMMM Do YYYY, h:mm:ss"></input>   
+            </div>       
         </section>
         
         <section id="moment-cultures-container">
         </section>
 
-        <div class='dialog-component' id='dialog-backgorund'></div>
+        <div class='dialog-component close-dialog' id='dialog-backgorund'></div>
         <dialog class="nes-dialog is-rounded dialog-component" id="date-formats-dialog">
             <form method="dialog">
-              <p class="title">Usefull date time formats</p>
+              <p class="tittle">Usefull date time formats</p>
               <div>
                     <p>Year</p>
                     <ul class="nes-list is-circle">
@@ -85,7 +87,7 @@
                     </ul>
                 </div>
                 <div>
-                    <p>Oters</p>
+                    <p>Others</p>
                     <ul>
                         <li>
                             <span class="usefull-format">w</span>,&nbsp;<span class="usefull-format">ww</span> week of year
@@ -99,10 +101,14 @@
                     </ul>
                 </div>
               <menu class="dialog-menu">
-                <button id="close-date-formats-dialog" class="nes-btn">OK</button>              
+                <button id="close-date-formats-dialog" class="nes-btn close-dialog">OK</button>              
               </menu>
             </form>
         </dialog>
+
+        <footer>
+
+        </footer>
 
         <script type="text/javascript" src="./static/js/noModule/moment.js"></script>
         <script type="module" src="./static/js/app.js"></script>

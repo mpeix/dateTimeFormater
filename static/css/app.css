@@ -23,12 +23,26 @@ h1, h3{
 }
 
 #format-container{
-    width:70%;
-    padding: 20px 0;
-}
-#format{
+    margin: 50px 0;
+    top:0;
+    position: sticky;
     width: 100%;
-    font-size: calc(8px + 6 * ((100vw - 320px) / (1200 - 320)));
+    display: flex;
+    justify-content: center;
+    background: white;
+    z-index: 2;
+}
+
+#format-wrapper{
+    padding: 10vh 0;
+    width: 100%;
+}
+
+#format{
+    max-width: 90%;
+    margin: 0 5%;
+    height: 100%;
+    min-height: 10vh;
     text-align: center;
 }
 
@@ -40,6 +54,11 @@ h1, h3{
     margin: 0 auto;
 }
 
+.shadow{
+    border-bottom: 1px solid #d1d1d1;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
 .moment-culture-container{
     padding: 20px 0 20px !important;
     margin: 0 auto !important;
@@ -49,8 +68,6 @@ h1, h3{
 
 .moment-culture-container h3{
     font-weight: lighter;
-   /* word-break: break-all;
-    font-size: calc(15px + 15 * ((100vw - 320px) / (1800 - 320)));*/
 }
 
 .date-time-container{
@@ -59,6 +76,10 @@ h1, h3{
     justify-content: center;
     align-items: center;
     font-size: calc(12px + 6 * ((100vw - 320px) / (1800 - 320)));
+}
+
+.date-time-container p{
+    margin:0;
 }
 
 .date-formated{
@@ -76,7 +97,9 @@ h1, h3{
     position: fixed;
     display: none;
 }
-
+.tittle{
+    text-align: center;
+}
 .dialog-menu{
     text-align: center;
     padding: 0;
@@ -111,9 +134,27 @@ h1, h3{
 }
 
 /*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 575px) { 
+    .moment-culture-container, .hidden-hack{
+        width: 95%;
+    }
+    #date-formats-dialog{
+        max-width: 95vw;
+        max-height: 100vh;
+        font-size: 0.7em;
+    }
+    #date-formats-dialog p{
+        margin-bottom: 5px;
+    }
+}
+
 @media (min-width: 576px) { 
     .moment-culture-container, .hidden-hack{
         width: 95%;
+    }
+    #date-formats-dialog{
+        max-width: 95vw;
+        max-height: 100vh;
     }
  }
 
@@ -121,7 +162,7 @@ h1, h3{
 @media (min-width: 768px) { 
     .moment-culture-container, .hidden-hack{
         width: 45%;        
-    } 
+    }   
 }
 
 /*Large devices (desktops, 992px and up)*/
