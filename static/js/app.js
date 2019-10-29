@@ -1,11 +1,21 @@
 
 import {MomentFormater} from './modules/momentFormater.js';
+import {PlaceHolderWrittingAnimation} from './modules/placeholderWrittingAnimation.js';
 
-
+const inputExamples =  [ "DD MM YYYY",
+                        "hh:mm:ss",
+                        "MMMM Do YYYY, h:mm:ss"
+                        ];
 
 document.addEventListener('DOMContentLoaded', () =>{
+    let inputAnimation = new PlaceHolderWrittingAnimation('format', inputExamples);
     let momentF = new MomentFormater('moment-cultures-container');
-    document.getElementById("format").addEventListener('keyup', (formatChangeEvent) =>{
+
+    let inputField = document.getElementById("format");
+    inputField.addEventListener('click', () =>{
+        inputAnimation.stopAnimation();        
+    });
+    inputField.addEventListener('keyup', (formatChangeEvent) =>{
         momentF.updateCultureFields(formatChangeEvent.target.value);        
     });
 
@@ -18,17 +28,16 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     //Closing dialog triggers
     Array.prototype.forEach.call(document.getElementsByClassName('close-dialog'), closeDialogTrigger =>  
-        closeDialogTrigger.addEventListener('click', () =>{
+        closeDialogTrigger.addEventListener('click', () => {
                                                 formatDialog.style.display = 'none';
                                                 dialogBackground.style.display = 'none';
     }));
-
 
     let formatWrapper = document.getElementById('format-wrapper');
     document.addEventListener('scroll', () =>{
         formatWrapper.getBoundingClientRect().y === 0 ? formatWrapper.classList.add('shadow') : formatWrapper.classList.remove('shadow');
     });
 
-    Textblock && Textblock([{ target: "h3"},{target: "#format", container:"self", minWidthFontSize: 0.5}]);
+    Textblock && Textblock([{ target: "h3"},{target: "#format", container:"self", minWidthFontSize: 1}]);
 });
 
